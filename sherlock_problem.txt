@@ -1,0 +1,48 @@
+#program 
+
+
+import java.util.*;
+public class Main
+{
+public static void main(String[] args){
+Scanner obj1 = new Scanner(System.in);
+String a = obj1.nextLine();
+int j = Integer.parseInt(a);
+        int i;
+ArrayList<String> arr = new ArrayList<String>(j);
+for(i=1;i<=j;i++){
+   Scanner obj2 = new Scanner(System.in);
+   String string1 = obj2.nextLine();
+   Scanner obj3 = new Scanner(System.in);
+   String string2 = obj3.nextLine();
+   StringBuilder rev_str = new StringBuilder();
+   rev_str.append(string1);
+   rev_str = rev_str.reverse();
+   if(string2.contains(string1) || string2.contains(rev_str)){
+       arr.add("Yes");
+   }
+   else{
+       arr.add("No");
+   }
+   
+}
+for(i=0;i<=arr.size()-1;i++){
+   System.out.println(arr.get(i));
+}
+}
+}
+
+#input
+3
+hack
+indiahacks
+code
+eddy
+coder
+imredoc
+
+
+#output 
+Yes 
+No
+Yes
